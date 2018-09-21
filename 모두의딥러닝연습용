@@ -1,0 +1,111 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled1.ipynb",
+      "version": "0.3.2",
+      "provenance": [],
+      "collapsed_sections": [],
+      "toc_visible": true,
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "[View in Colaboratory](https://colab.research.google.com/github/Hyunjulie/Basic_ML/blob/master/%EB%AA%A8%EB%91%90%EC%9D%98%EB%94%A5%EB%9F%AC%EB%8B%9D%EC%97%B0%EC%8A%B5%EC%9A%A9)"
+      ]
+    },
+    {
+      "metadata": {
+        "id": "26tu8a9jJQhl",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "import pandas as pd\n"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "metadata": {
+        "id": "NuqqWCtkJTNj",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 425
+        },
+        "outputId": "db9b87c3-6a26-4292-e3ee-8e9f779e99ca"
+      },
+      "cell_type": "code",
+      "source": [
+        "import tensorflow as tf\n",
+        "np.loadtxt('data-01-test-score.csv', delimiter=',', skiprows=1)"
+      ],
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[ 93.,  88.,  93., 185.],\n",
+              "       [ 89.,  91.,  90., 180.],\n",
+              "       [ 96.,  98., 100., 196.],\n",
+              "       [ 73.,  66.,  70., 142.],\n",
+              "       [ 53.,  46.,  55., 101.],\n",
+              "       [ 69.,  74.,  77., 149.],\n",
+              "       [ 47.,  56.,  60., 115.],\n",
+              "       [ 87.,  79.,  90., 175.],\n",
+              "       [ 79.,  70.,  88., 164.],\n",
+              "       [ 69.,  70.,  73., 141.],\n",
+              "       [ 70.,  65.,  74., 141.],\n",
+              "       [ 93.,  95.,  91., 184.],\n",
+              "       [ 79.,  80.,  73., 152.],\n",
+              "       [ 70.,  73.,  78., 148.],\n",
+              "       [ 93.,  89.,  96., 192.],\n",
+              "       [ 78.,  75.,  68., 147.],\n",
+              "       [ 81.,  90.,  93., 183.],\n",
+              "       [ 88.,  92.,  86., 177.],\n",
+              "       [ 78.,  83.,  77., 159.],\n",
+              "       [ 82.,  86.,  90., 177.],\n",
+              "       [ 86.,  82.,  89., 175.],\n",
+              "       [ 78.,  83.,  85., 175.],\n",
+              "       [ 76.,  83.,  71., 149.],\n",
+              "       [ 96.,  93.,  95., 192.]])"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 5
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "id": "IHi-XTHPJdNG",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "cell_type": "code",
+      "source": [
+        ""
+      ],
+      "execution_count": 0,
+      "outputs": []
+    }
+  ]
+}
