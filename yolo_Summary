@@ -1,0 +1,83 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled7.ipynb",
+      "version": "0.3.2",
+      "provenance": [],
+      "collapsed_sections": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "[View in Colaboratory](https://colab.research.google.com/github/Hyunjulie/Object_Detection/blob/master/yolo_description.ipynb)"
+      ]
+    },
+    {
+      "metadata": {
+        "id": "YWYtP7XfXOMM",
+        "colab_type": "text"
+      },
+      "cell_type": "markdown",
+      "source": [
+        "# Object Detection: YOLO2\n",
+        "\n",
+        "\n",
+        "Note: This is based on Siraj's tutorial https://www.youtube.com/watch?v=4eIBisqx9_g \n",
+        "Paper: https://arxiv.org/pdf/1612.08242v1.pdf\n",
+        "\n",
+        "***Classification*** - does the category exist in the image? \n",
+        "\n",
+        "***Object Detection***- What kind of category is in the image / What's the relationship with the background / Can we draw a box around it? \n",
+        "\n",
+        "\n",
+        "###What is YOLO? \n",
+        "\n",
+        "- YOLO takes a completely different approach from R-CNNs \n",
+        "- Not a traditional classifier (repurposed to be an object detector)\n",
+        "\n",
+        "###How does it work\n",
+        "\n",
+        "- Divides up the image into a grid of 13 X 13 cells: one cell is responsible of detecting up to 5 boxes --> YOLO outputs a confidence score that tells us how certain it is that the predicted bounding box encloses some kind of object\n",
+        "- Score doesn't say anything about what kind of object is in the box\n",
+        "- Confidence score for the bounding box and the class prediction are combined --> One final score telling us the probability that this bounding box contains a specific type of object \n",
+        "- 13 X 13 = 169 grid cells, each with 5 bounding boxes --> 845 bounding boxes\n",
+        "- Most boxes have very low confidence score --> Only keep the boxes whose final score is bigger than a threshold  \n",
+        "\n",
+        "\n",
+        "###Neural Network Architecture \n",
+        "It uses standard layer tyles: convolution with 3X3 kernel and max-pooling with 2X2 kernel. \n",
+        "It does not have any fully-connected layer \n",
+        "Last layer has 1X1 kernel and exists to reduce the data to the shape of 13 X 13 X 125 \n",
+        "- 13 X 13: size of the grid the images gets divided into \n",
+        "- 125 channels for every grid cell: 125 (each grid cell predicts 5 bounding boxes & bounding box is described by 25 data elements)\n",
+        "- Types of data elements: coordinates for bounding box's rectangle, confidence score, probability distribuiton over the classes\n"
+      ]
+    },
+    {
+      "metadata": {
+        "id": "1y-f94iYXMyi",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "cell_type": "code",
+      "source": [
+        ""
+      ],
+      "execution_count": 0,
+      "outputs": []
+    }
+  ]
+}
